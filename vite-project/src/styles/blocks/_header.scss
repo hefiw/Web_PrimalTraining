@@ -54,6 +54,11 @@
         }
     }
 
+    &__icon-plus-vertical {
+        transform-origin: 53% 48%;
+        transition: $tr-05s;
+    }
+
     @include vp-800 {
         &--opened {
             background-color: $color-white;
@@ -87,6 +92,10 @@
                     width: 100%;
                     height: 100%;
                 }
+            }
+
+            .header__icon-plus-vertical {
+                transform: rotate(90deg);
             }
         }
     }

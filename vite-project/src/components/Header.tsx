@@ -1,10 +1,17 @@
-import React, { type FC } from "react";
+import React, { type FC, type ReactElement } from "react";
 import { Link } from "react-router-dom";
 import SVG from "./SVG";
 
 const Header: FC = () => {
+
+  function openBurger():void {
+    const header = document.querySelector('.header');
+    if (!header) return
+    header.classList.toggle('header--opened')
+  }
+
   return (
-    <header className="header header--opened">
+    <header className="header">
       <div className="container">
         <div className="header__wrapper">
           <Link className="header__logo" to="/">
@@ -21,8 +28,17 @@ const Header: FC = () => {
               RESERVE YOUR SPOT
             </Link>
           </div>
-          <button className="header__burger-btn">
-            <SVG id="icon-plus" width={32} heigth={32} />
+          <button className="header__burger-btn" onClick={openBurger}>
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path className="header__icon-plus-vertical" d="M16.75 2V30" stroke="black" strokeWidth="1" />
+              <path d="M2 15.25H30" stroke="black" strokeWidth="1" />
+            </svg>
           </button>
         </div>
       </div>

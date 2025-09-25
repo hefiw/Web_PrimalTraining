@@ -9,8 +9,8 @@ interface SVGProps {
 
 const SVG: FC<SVGProps> = ({ id, width, heigth }) => {
   return (
-    <svg width={width} height={heigth}>
-      <use xlinkHref={`${sprite}#${id}`}></use>
+    <svg width={`${width}px`} height={`${heigth}px`}>
+      <use width={`${width}px`} height={`${heigth}px`} xlinkHref={`${sprite}#${id}`}></use>
     </svg>
   );
 };

@@ -5,3 +5,9 @@
 @import './globals/reboot';
 @import './globals/container';
 @import './globals/visually-hidden';
+
+@import './globals/UI/link';
+@import './globals/UI/btn';
+
+//blocks
+@import './blocks/header';

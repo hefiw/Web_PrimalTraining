@@ -1,0 +1,136 @@
+.header {
+    background-color: $color-lavender;
+    border-bottom: 1px solid $color-black;
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background-color: $color-lavender;
+            height: 100%;
+            z-index: 2;
+        }
+    }
+
+    &__logo {
+        width: 180.32px;
+        height: 25.78px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__links-wrapper {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+        max-width: 386px;
+        z-index: 3;
+
+        @include vp-800 {
+            display: grid;
+            grid-template-columns: 100vw;
+            grid-template-rows: repeat(3, 73px);
+            gap: 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            opacity: 0%;
+            z-index: 1;
+            transform: translate(0%);
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+    }
+
+    &__burger-btn {
+        display: none;
+        height: 32px;
+        width: 32px;
+        padding: 0;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+        z-index: 3;
+
+        @include vp-800 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__icon-plus-vertical {
+        transform-origin: 53% 48%;
+        transition: $tr-05s;
+    }
+
+    &__link {
+        @include vp-800 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__btn {
+        @include vp-800 {
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: $color-white;
+            padding: 20px;
+        }
+    }
+
+    @include vp-800 {
+        &--opened {
+            background-color: $color-white;
+        
+            .header__links-wrapper {
+                transform: translateY(100%);
+                opacity: 100%;
+            }
+
+            .header__icon-plus-vertical {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+
+@keyframes topDownMove {
+    0% {
+        transform: translateY(0%);
+        color: #ff0000;
+    }
+    
+    100% {
+        transform: translateY(100%);
+        color: #009dff;
+    }
+}

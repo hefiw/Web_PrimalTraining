@@ -1,0 +1,39 @@
+.footer-block {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-family: $ff-anek;
+        text-transform: uppercase;
+        font-size: 22px;
+        letter-spacing: -0.03em;
+        line-height: 1.31em;
+        font-weight: 700;
+        margin: 0 0 15px;
+    }
+
+    &__text {
+        font-family: $ff-geist;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.31em;
+        letter-spacing: 0.01em;
+
+        &--link {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__text-wrapper {
+        display: flex;
+
+        &--hours {
+            width: 237px;
+            justify-content: space-between;
+        }
+    }
+}

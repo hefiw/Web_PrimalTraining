@@ -358,6 +358,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 img {
@@ -377,6 +384,7 @@ a {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
+  height: 100%;
 }
 
 .visually-hidden {
@@ -539,4 +547,85 @@ a {
     transform: translateY(100%);
     color: #009dff;
   }
+}
+.footer {
+  background-color: #E9ECFF;
+  padding: 27px 0 31.83px;
+  min-height: 480px;
+  border-top: 1px solid #000000;
+}
+.footer__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .footer__wrapper {
+    gap: 80px;
+  }
+}
+.footer__top-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .footer__top-wrapper {
+    flex-direction: column;
+    gap: 28px;
+  }
+}
+.footer__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .footer__bottom-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.footer__home-link svg {
+  width: 229px;
+  height: 136px;
+}
+@media (max-width: 800px) {
+  .footer__home-link svg {
+    width: 150px;
+    height: 89px;
+  }
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+}
+.footer-block__title {
+  font-family: "Anek-Tamil", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  line-height: 1.31em;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+.footer-block__text {
+  font-family: "Geist", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.31em;
+  letter-spacing: 0.01em;
+}
+.footer-block__text--link {
+  text-decoration: underline;
+}
+.footer-block__text--link:hover {
+  text-decoration: none;
+}
+.footer-block__text-wrapper {
+  display: flex;
+}
+.footer-block__text-wrapper--hours {
+  width: 237px;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

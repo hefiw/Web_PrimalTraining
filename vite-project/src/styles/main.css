@@ -412,6 +412,8 @@ a {
 }
 
 .btn {
+  border: none;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -424,6 +426,9 @@ a {
   border-radius: 7.25px;
   padding: 12px;
   width: 196px;
+}
+.btn--white {
+  background-color: #E9ECFF;
 }
 
 .header {
@@ -630,4 +635,28 @@ a {
 .footer-block__text-wrapper--hours {
   width: 237px;
   justify-content: space-between;
+}
+
+.ending-zone {
+  background-color: #808CFD;
+  padding: 162px 0;
+}
+.ending-zone__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  text-align: center;
+}
+.ending-zone__text {
+  font-size: 17px;
+  line-height: 1.31em;
+  letter-spacing: -0.01em;
+}
+.ending-zone__title {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 57px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
 }/*# sourceMappingURL=main.css.map */
